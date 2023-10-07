@@ -440,7 +440,7 @@ button {
 
     display: -webkit-box;
     max-width: 100%;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -469,8 +469,13 @@ button {
     background-color: #F3F6F8;
 }
 
-.upvote:hover .upvote__icon,
+
 .upvote:hover .upvote__count {
+    color: #784a86;
+}
+
+.upvote__icon--up:hover,
+.upvote__icon--down:hover {
     color: #784a86;
 }
 
@@ -482,17 +487,25 @@ button {
     pointer-events: none;
 }
 
-.upvote__icon {
+.upvote__icon--up,
+.upvote__icon--down {
     color: #D7DBE2;
     font-size: 19px;
     display: block;
     transition: all 0.2s;
 }
 
-.upvote__count {
+.upvote__count--up,
+.vote__count {
     color: #6C6F76;
     font-size: 11px;
     margin-top: -1px;
+}
+
+
+.voteicon--disable {
+    opacity: .9;
+    pointer-events: none;
 }
 
 /* HASHTAGS */
