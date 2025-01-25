@@ -38,7 +38,6 @@ const renderFeedbackItem = (feedbackItem, post) => {
         </li>
     `
         :
-
         '';
     //insert new feedback item in list
     feedbacksEl.insertAdjacentHTML('beforeend', insertHTMLPostContent);
@@ -185,9 +184,10 @@ formEl.addEventListener('submit', formSubmitHandler);
         // console.log(event)
         //get clicked HTML-element
         const clickedEl = event.target;
-
+        console.log(clickedEl)
         //determine if user intended to upvote or expand. Returns a boolean value
         const upvoteIntention = clickedEl.className.includes('upvote');
+        console.log(upvoteIntention)
 
         //run the appropriate logic
         if (upvoteIntention) {
@@ -233,7 +233,6 @@ formEl.addEventListener('submit', formSubmitHandler);
     }
     feedbacksEl.addEventListener('click', clickHandler);
 })()
-
 
 
 
